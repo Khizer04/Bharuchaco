@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharucha & Co. | Decades of Legal Excellence</title>
+<meta name="description" content="Established 1948, Bharucha & Co. is one of Pakistan's oldest law firms — a leader in intellectual property, corporate, and civil law in Karachi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: '#1E196B',
+        navydeep: '#15103F',
+        indigo2: '#4F46E5',
+        slate2: '#64748B',
+        ink: '#0F172A',
+        offwhite: '#F8FAFC',
+      },
+      fontFamily: {
+        display: ['Rubik', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: #F8FAFC; color: #0F172A; overflow-x: hidden; }
+  .font-display { font-family: 'Rubik', sans-serif; }
+
+  /* Hero animated aurora */
+  .aurora { position:absolute; inset:0; overflow:hidden; }
+  .aurora span { position:absolute; border-radius:9999px; filter:blur(80px); opacity:.55; }
+  .a1 { width:55vw; height:55vw; left:-10vw; top:-15vw; background:#4F46E5; animation:drift1 18s ease-in-out infinite; }
+  .a2 { width:45vw; height:45vw; right:-10vw; top:10vh; background:#2A2390; animation:drift2 22s ease-in-out infinite; }
+  .a3 { width:40vw; height:40vw; left:25vw; bottom:-20vw; background:#3730A3; animation:drift3 26s ease-in-out infinite; }
+  @keyframes drift1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(8vw,6vh) scale(1.15)} }
+  @keyframes drift2 { 0%,100%{transform:translate(0,0) scale(1.1)} 50%{transform:translate(-6vw,4vh) scale(1)} }
+  @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(4vw,-6vh) scale(1.2)} }
+
+  .grain { position:absolute; inset:0; opacity:.06; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+  /* Kinetic hero reveal */
+  .reveal-line { display:block; overflow:hidden; padding-bottom:.3em; margin-bottom:-.28em; line-height:1.05; }
+  .reveal-line > span { display:inline-block; transform:translateY(130%); transition:transform 1s cubic-bezier(.16,1,.3,1); padding-bottom:.05em; }
+  .hero-in .reveal-line > span { transform:translateY(0); }
+  .d1 > span{transition-delay:.15s}.d2 > span{transition-delay:.3s}.d3 > span{transition-delay:.45s}
+  .fade-up{opacity:0;transform:translateY(24px);transition:all 1s cubic-bezier(.16,1,.3,1);transition-delay:.7s}
+  .hero-in .fade-up{opacity:1;transform:none}
+
+  /* Scroll reveal */
+  .sr{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+  .sr.in{opacity:1;transform:none}
+  .sr-d1{transition-delay:.1s}.sr-d2{transition-delay:.2s}.sr-d3{transition-delay:.3s}.sr-d4{transition-delay:.4s}
+
+  /* Marquee */
+  .marquee{display:flex;width:max-content;animation:scrollx 32s linear infinite}
+  @keyframes scrollx{to{transform:translateX(-50%)}}
+
+  .nav-link{position:relative}
+  .nav-link::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1.5px;background:currentColor;transition:width .3s}
+  .nav-link:hover::after{width:100%}
+
+  .pa-card{transition:transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s, border-color .5s}
+  .pa-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px -20px rgba(30,25,107,.28);border-color:#1E196B}
+  .pa-card .arrow{transition:transform .4s}
+  .pa-card:hover .arrow{transform:translate(4px,-4px)}
+
+  .counter{font-variant-numeric:tabular-nums}
+
+  /* Approach experts marquee */
+  .exp-marquee{animation:scrollx 38s linear infinite}
+  .exp-marquee.paused{animation-play-state:paused}
+  .exp-card{flex:0 0 auto;width:200px;height:260px;background:#E2E8F0;border-radius:2px;overflow:hidden;
+    transform:translateY(-70px);box-shadow:0 12px 30px -12px rgba(0,0,0,.3)}
+  .exp-card img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .exp-card:nth-child(even){transform:translateY(-30px)}
+
+  /* Full-bleed accent blocks behind value images (connect to experts band) */
+  .vbleed{position:absolute;background:#4F46E5;z-index:0;top:2.5rem;bottom:-2.5rem;width:46%}
+  .vbleed.l{left:0}
+  .vbleed.r{right:0}
+  .vbleed.connect{top:-7rem}
+  @media (max-width:1023px){.vbleed{width:60%;top:1.5rem;bottom:-1.5rem}.vbleed.connect{top:-4rem}}
+  /* CSS wordmark logo */
+  .logo-wordmark{display:inline-flex;flex-direction:column;line-height:.82;font-family:'Rubik',sans-serif;
+    letter-spacing:-.01em;color:currentColor}
+  .logo-wordmark .lw-main{font-size:1.45rem;font-weight:800}
+  .logo-wordmark .lw-sub{font-size:.7rem;font-weight:700;letter-spacing:.02em;align-self:flex-end;margin-top:-.04em}
+  @media (min-width:1024px){.logo-wordmark .lw-main{font-size:1.6rem}.logo-wordmark .lw-sub{font-size:.76rem}}
+
+  /* Memberships marquee */
+  .mq-mask{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+  .mq-row{display:flex;width:max-content;gap:1.1rem}
+  .mq-a{animation:scrollx 50s linear infinite}
+  .mq-b{animation:scrollx 50s linear infinite reverse}
+  .mq-wrap:hover .mq-row{animation-play-state:paused}
+  .mcard{flex:0 0 auto;width:270px;background:#fff;border:1px solid #E2E8F0;border-radius:14px;
+    padding:20px 22px;display:flex;align-items:center;gap:16px;transition:border-color .4s,transform .4s,box-shadow .4s}
+  .mcard:hover{border-color:#1E196B;transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(30,25,107,.3)}
+  .mcard .ac{font-family:'Rubik',sans-serif;font-weight:700;color:#1E196B;font-size:1.05rem;
+    background:#EEF0FF;border-radius:10px;width:58px;height:58px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:.92rem;text-align:center;line-height:1.05}
+  .mcard .nm{font-size:.86rem;color:#475569;line-height:1.35}
+
+  .uline{position:relative;white-space:nowrap}
+  .uline::after{content:'';position:absolute;left:0;bottom:.08em;width:100%;height:5px;background:#4F46E5}
+
+  /* Floating-label contact form */
+  .ff{position:relative}
+  .ff input,.ff textarea{width:100%;background:transparent;border:0;border-bottom:1.5px solid rgba(255,255,255,.22);
+    color:#fff;padding:12px 0 8px;font-size:1.05rem;outline:none;transition:border-color .35s;resize:none}
+  .ff label{position:absolute;left:0;top:12px;color:rgba(255,255,255,.5);font-size:1.05rem;pointer-events:none;
+    transition:all .3s cubic-bezier(.16,1,.3,1)}
+  .ff input:focus~label,.ff input:not(:placeholder-shown)~label,
+  .ff textarea:focus~label,.ff textarea:not(:placeholder-shown)~label{top:-12px;font-size:.72rem;letter-spacing:.12em;
+    text-transform:uppercase;color:#A5B4FC}
+  .ff input:focus,.ff textarea:focus{border-color:#A5B4FC}
+
+  /* Interactive hero spotlight */
+  #spotlight{position:absolute;inset:0;z-index:5;pointer-events:none;opacity:0;transition:opacity .6s;
+    background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(165,180,252,.18),transparent 65%);}
+  section#top:hover #spotlight{opacity:1}
+  #heroCanvas{position:absolute;inset:0;z-index:2;pointer-events:none}
+  .parallax{will-change:transform;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+
+  /* Per-letter hero hover */
+  .ltr{display:inline-block;transition:transform .35s cubic-bezier(.16,1,.3,1),color .35s;will-change:transform}
+  .ltr:hover{transform:translateY(-.08em) scale(1.04);color:#A5B4FC}
+
+  /* Magnetic buttons */
+  .magnetic{will-change:transform;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+
+  /* Custom cursor */
+  #cursor{position:fixed;top:0;left:0;width:36px;height:36px;border:1.5px solid rgba(255,255,255,.6);border-radius:50%;
+    transform:translate(-50%,-50%);pointer-events:none;z-index:9999;mix-blend-mode:difference;
+    transition:width .25s,height .25s,background .25s,border-color .25s;opacity:0}
+  #cursor.big{width:84px;height:84px;background:#fff;border-color:#fff}
+  #cursorDot{position:fixed;top:0;left:0;width:5px;height:5px;background:#fff;border-radius:50%;
+    transform:translate(-50%,-50%);pointer-events:none;z-index:9999;mix-blend-mode:difference;opacity:0}
+  @media (hover:none){#cursor,#cursorDot{display:none}}
+
+  /* Scroll cue */
+  .scrollcue{position:absolute;left:50%;bottom:1.5rem;transform:translateX(-50%);z-index:10}
+  .scrollcue .mouse{width:24px;height:38px;border:1.5px solid rgba(255,255,255,.5);border-radius:14px;position:relative}
+  .scrollcue .mouse::after{content:'';position:absolute;left:50%;top:7px;width:3px;height:7px;border-radius:2px;background:#fff;
+    transform:translateX(-50%);animation:wheel 1.8s ease-in-out infinite}
+  @keyframes wheel{0%{opacity:0;top:7px}30%{opacity:1}60%{opacity:1;top:18px}100%{opacity:0;top:18px}}
+
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}.sr,.fade-up,.reveal-line>span{opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursorDot"></div>
+
+<!-- NAV -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="#top" class="relative flex items-center" aria-label="Bharucha & Co.">
+      <img id="logoWhite" src="logo-white.png" alt="Bharucha & Co." class="h-7 lg:h-8 w-auto transition-opacity duration-300">
+      <img id="logoNavy" src="logo-navy.png" alt="Bharucha & Co." class="h-7 lg:h-8 w-auto absolute left-0 top-0 opacity-0 transition-opacity duration-300">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-sm font-medium" id="navItems">
+      <a href="#firm" class="nav-link text-white/90">The Firm</a>
+      <a href="#practice" class="nav-link text-white/90">Services</a>
+      <a href="#people" class="nav-link text-white/90">Professionals</a>
+      <a href="#insights" class="nav-link text-white/90">Insights</a>
+      <a href="#contact" class="nav-link text-white/90">Contact</a>
+    </nav>
+    <a href="#contact" id="navCta" class="hidden lg:inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full border border-white/30 text-white hover:bg-white hover:text-navy transition-all">
+      Get in touch
+    </a>
+    <button id="burger" class="lg:hidden text-white p-2" aria-label="Menu">
+      <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h18M4 13h18M4 18h18"/></svg>
+    </button>
+  </div>
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden bg-navydeep text-white px-6 pb-8 pt-2">
+    <a href="#firm" class="block py-3 border-b border-white/10">The Firm</a>
+    <a href="#practice" class="block py-3 border-b border-white/10">Services</a>
+    <a href="#people" class="block py-3 border-b border-white/10">Professionals</a>
+    <a href="#insights" class="block py-3 border-b border-white/10">Insights</a>
+    <a href="#contact" class="block py-3 border-b border-white/10">Contact</a>
+    <a href="#contact" class="mt-4 inline-flex px-5 py-3 rounded-full bg-white text-navy font-medium">Get in touch</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative min-h-screen flex flex-col justify-center bg-navydeep text-white overflow-hidden">
+  <div class="aurora" id="aurora"><span class="a1 parallax" data-depth="22"></span><span class="a2 parallax" data-depth="36"></span><span class="a3 parallax" data-depth="14"></span></div>
+  <canvas id="heroCanvas"></canvas>
+  <div id="spotlight"></div>
+  <div class="grain"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-28 pb-16">
+    <div class="fade-up flex items-center gap-3 mb-8">
+      <span class="h-px w-10 bg-indigo2"></span>
+      <span class="text-xs tracking-[0.25em] uppercase text-white/70">Karachi · Established 1948</span>
+    </div>
+    <h1 class="parallax font-display font-bold leading-[0.95] tracking-tight text-[13vw] sm:text-[10vw] lg:text-[8.5vw]" data-depth="-10">
+      <span class="reveal-line d1"><span class="letters" data-text="Decades of"></span></span>
+      <span class="reveal-line d2"><span class="letters grad" data-text="legal"></span></span>
+      <span class="reveal-line d3"><span class="letters" data-text="excellence."></span></span>
+    </h1>
+    <div class="fade-up mt-10 grid lg:grid-cols-12 gap-8 items-end">
+      <p class="lg:col-span-6 text-lg lg:text-xl text-white/75 font-light leading-relaxed">
+        Thorough legal counsel and strategy, tailored to the intricacies of challenging
+        business environments — for clients across Pakistan and around the world.
+      </p>
+      <div class="lg:col-span-6 lg:flex lg:justify-end gap-4">
+        <a href="#practice" class="magnetic inline-flex items-center gap-2 px-7 py-4 rounded-full bg-white text-navy font-medium hover:bg-indigo2 hover:text-white transition-all">
+          Explore our services
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h12M11 4l5 5-5 5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- marquee -->
+  <div class="relative z-10 border-t border-white/10 py-5 overflow-hidden">
+    <div class="marquee text-white/40 font-display text-sm tracking-widest uppercase">
+      <div class="flex">
+        <span class="px-8">Intellectual Property</span><span class="px-8">•</span><span class="px-8">Corporate &amp; Company Law</span><span class="px-8">•</span><span class="px-8">Trademarks &amp; Patents</span><span class="px-8">•</span><span class="px-8">Real Estate</span><span class="px-8">•</span><span class="px-8">Litigation</span><span class="px-8">•</span><span class="px-8">Franchising</span><span class="px-8">•</span>
+      </div>
+      <div class="flex" aria-hidden="true">
+        <span class="px-8">Intellectual Property</span><span class="px-8">•</span><span class="px-8">Corporate &amp; Company Law</span><span class="px-8">•</span><span class="px-8">Trademarks &amp; Patents</span><span class="px-8">•</span><span class="px-8">Real Estate</span><span class="px-8">•</span><span class="px-8">Litigation</span><span class="px-8">•</span><span class="px-8">Franchising</span><span class="px-8">•</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-20 grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6">
+    <div class="sr">
+      <div class="font-display font-bold text-5xl lg:text-6xl text-navy"><span class="counter" data-target="75">0</span><span class="text-indigo2">+</span></div>
+      <p class="mt-3 text-slate2 text-sm">Years of practice since 1948</p>
+    </div>
+    <div class="sr sr-d1">
+      <div class="font-display font-bold text-5xl lg:text-6xl text-navy"><span class="counter" data-target="9">0</span></div>
+      <p class="mt-3 text-slate2 text-sm">Core practice areas</p>
+    </div>
+    <div class="sr sr-d2">
+      <div class="font-display font-bold text-5xl lg:text-6xl text-navy">#<span class="counter" data-target="1">0</span></div>
+      <p class="mt-3 text-slate2 text-sm">Ranked IP firms in Pakistan</p>
+    </div>
+    <div class="sr sr-d3">
+      <div class="font-display font-bold text-5xl lg:text-6xl text-navy"><span class="counter" data-target="100">0</span><span class="text-indigo2">%</span></div>
+      <p class="mt-3 text-slate2 text-sm">Client-focused counsel</p>
+    </div>
+  </div>
+</section>
+
+<!-- FIRM / ABOUT -->
+<section id="firm" class="bg-offwhite">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32 grid lg:grid-cols-12 gap-12 lg:gap-16">
+    <div class="lg:col-span-5 sr">
+      <span class="text-xs tracking-[0.25em] uppercase text-indigo2 font-medium">The Firm</span>
+      <h2 class="font-display font-bold text-4xl lg:text-5xl leading-tight mt-5 text-ink">
+        One of Pakistan's oldest law firms — still ahead of the curve.
+      </h2>
+      <a href="#practice" class="inline-flex items-center gap-2 mt-8 text-navy font-medium border-b border-navy/30 pb-1 hover:border-navy transition-colors">
+        See how we work
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <div class="lg:col-span-7 sr sr-d2 space-y-6 text-slate2 text-lg leading-relaxed font-light">
+      <p>Established in <span class="text-ink font-medium">1948</span>, Bharucha &amp; Co. stands among the oldest law firms in Pakistan. Over more than seven decades we have continually diversified our services to meet evolving client needs.</p>
+      <p>Our practice spans intellectual property, company law, real estate and property, inheritance and succession, not-for-profit entities, franchising and litigation. Our associates share skills and resources to obtain optimal results for every client.</p>
+      <p>We have been ranked by various legal referral guides as one of the <span class="text-ink font-medium">best intellectual property law firms in Pakistan</span> — serving local and international clients across industries.</p>
+    </div>
+    <div class="lg:col-span-12 sr sr-d2 mt-6">
+      <div class="relative rounded-3xl overflow-hidden aspect-[21/9]">
+        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1600&q=80&auto=format&fit=crop" alt="Classical law library" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-navydeep/30"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section id="practice" class="bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 sr">
+      <div>
+        <span class="text-xs tracking-[0.25em] uppercase text-indigo2 font-medium">What we do</span>
+        <h2 class="font-display font-bold text-4xl lg:text-5xl mt-4 text-ink">Areas of practice</h2>
+      </div>
+      <p class="text-slate2 max-w-md font-light">Comprehensive, well-rounded counsel across the disciplines that matter most to businesses and individuals.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="paGrid"></div>
+  </div>
+</section>
+
+<!-- APPROACH: experts strip + value rows -->
+<section id="approach" class="bg-white overflow-hidden">
+  <!-- experts strip: white top, solid color band below -->
+  <div class="relative pt-12 sm:pt-16">
+    <div class="absolute bottom-0 inset-x-0 h-40 sm:h-48 lg:h-56 bg-indigo2"></div>
+    <div class="relative max-w-6xl mx-auto px-6 lg:px-10 grid grid-cols-3 gap-3 sm:gap-6 items-end mb-16 sm:mb-24 lg:mb-28">
+      <img src="Mohammad%20Fazil%20Bharucha.png" alt="Mohammad Fazil Bharucha" class="w-full h-[180px] sm:h-[300px] lg:h-[380px] object-cover object-top">
+      <img src="Abdul%20Aziz.png" alt="Abdul Aziz" class="w-full h-[200px] sm:h-[340px] lg:h-[430px] object-cover object-top">
+      <img src="Tayseer%20Fazil%20Bharucha.jpg" alt="Tayseer Fazil Bharucha" class="w-full h-[180px] sm:h-[300px] lg:h-[380px] object-cover object-top">
+    </div>
+  </div>
+
+  <!-- ROW 1 — block connects up to the experts band -->
+  <div class="vrow relative pb-20 lg:pb-28">
+    <div class="vbleed l connect"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center sr">
+      <div class="lg:col-span-7"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1000&q=80&auto=format&fit=crop" alt="Partnering with clients" class="w-full aspect-[16/10] object-cover"></div>
+      <div class="lg:col-span-5">
+        <h3 class="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight"><span class="uline">We partner</span><br>with your business</h3>
+        <p class="text-slate2 mt-5 leading-relaxed font-light">Our relationships go beyond the typical attorney–client dynamic. Our lawyers become an integral part of your strategic planning and risk-management teams.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="vrow relative py-16 lg:py-24">
+    <div class="vbleed r"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center sr">
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <h3 class="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight"><span class="uline">We provide</span> actionable,<br>practical advice</h3>
+        <p class="text-slate2 mt-5 leading-relaxed font-light">We add value by helping plan the strategies necessary to achieve your goals — and by implementing them to a successful, cost-effective conclusion.</p>
+      </div>
+      <div class="lg:col-span-7 order-1 lg:order-2"><img src="https://images.unsplash.com/photo-1528819622765-d6bcf132f793?w=1000&q=80&auto=format&fit=crop" alt="Strategy" class="w-full aspect-[16/10] object-cover"></div>
+    </div>
+  </div>
+
+  <!-- ROW 3 -->
+  <div class="vrow relative py-16 lg:py-24">
+    <div class="vbleed l"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center sr">
+      <div class="lg:col-span-7"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1000&q=80&auto=format&fit=crop" alt="Resources" class="w-full aspect-[16/10] object-cover"></div>
+      <div class="lg:col-span-5">
+        <h3 class="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight"><span class="uline">We bring</span><br>the right resources</h3>
+        <p class="text-slate2 mt-5 leading-relaxed font-light">We work hard to make sure you are connected to the right services, simplifying often complex legal issues across every discipline.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 4 -->
+  <div class="vrow relative py-16 lg:py-24">
+    <div class="vbleed r"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center sr">
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <h3 class="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight"><span class="uline">We respond</span> with speed,<br>accuracy + insight</h3>
+        <p class="text-slate2 mt-5 leading-relaxed font-light">We listen carefully to understand your issues, then use our experience to respond quickly and accurately — always giving the right advice on your timeline.</p>
+      </div>
+      <div class="lg:col-span-7 order-1 lg:order-2"><img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?w=1000&q=80&auto=format&fit=crop" alt="Responsiveness" class="w-full aspect-[16/10] object-cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONALS -->
+<section id="people" class="bg-offwhite">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="text-center max-w-2xl mx-auto mb-16 sr">
+      <span class="text-xs tracking-[0.25em] uppercase text-indigo2 font-medium">Professionals</span>
+      <h2 class="font-display font-bold text-4xl lg:text-5xl mt-5 text-ink leading-tight">An expert team behind every result.</h2>
+      <p class="text-slate2 text-lg font-light mt-6 leading-relaxed">Our lawyers combine deep specialist knowledge with a collaborative ethos — bringing the right people to every matter.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7" id="peopleGrid"></div>
+    <div class="flex justify-center mt-14 sr">
+      <a href="#contact" class="magnetic inline-flex items-center gap-2 px-8 py-4 rounded-full bg-navy text-white font-medium hover:bg-indigo2 transition-all">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6.5" cy="6" r="2.5"/><circle cx="13" cy="6.5" r="2"/><path d="M2 15c0-2.5 2-4 4.5-4S11 12.5 11 15M11.5 14c0-1.8 1-3 2.8-3S17 12.2 17 14"/></svg>
+        View More
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITIONS -->
+<section id="recognitions" class="bg-white border-y border-slate-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-24">
+    <div class="text-center mb-12 sr">
+      <span class="text-xs tracking-[0.25em] uppercase text-indigo2 font-medium">Recognitions</span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl mt-4 text-ink">Trusted and ranked by leading guides</h2>
+    </div>
+    <div class="relative sr">
+      <button id="recPrev" aria-label="Previous" class="absolute left-0 lg:-left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-navy hover:bg-navy hover:text-white hover:border-navy transition-all">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4l-5 5 5 5"/></svg>
+      </button>
+      <div class="overflow-hidden mx-12 lg:mx-14">
+        <div id="recTrack" class="flex transition-transform duration-500 ease-out"></div>
+      </div>
+      <button id="recNext" aria-label="Next" class="absolute right-0 lg:-right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-slate-200 bg-white flex items-center justify-center text-navy hover:bg-navy hover:text-white hover:border-navy transition-all">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4l5 5-5 5"/></svg>
+      </button>
+    </div>
+    <div id="recDots" class="flex justify-center gap-2 mt-10"></div>
+  </div>
+</section>
+
+<!-- MEMBERSHIPS -->
+<section id="memberships" class="bg-offwhite overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-20 lg:pt-24 text-center sr">
+    <h2 class="font-display font-bold text-4xl lg:text-6xl text-ink">Memberships</h2>
+    <p class="text-slate2 font-light mt-5 max-w-2xl mx-auto text-lg">Part of the global IP community — active members of the leading international intellectual-property, trademark, patent and bar associations worldwide.</p>
+  </div>
+  <div class="mq-wrap py-14 lg:py-16 space-y-5">
+    <div class="mq-mask"><div id="mqRowA" class="mq-row mq-a"></div></div>
+    <div class="mq-mask"><div id="mqRowB" class="mq-row mq-b"></div></div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights" class="bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="flex items-end justify-between mb-14 sr">
+      <h2 class="font-display font-bold text-4xl lg:text-5xl text-ink">News &amp; insights</h2>
+      <a href="#" class="hidden sm:inline-flex items-center gap-2 text-navy font-medium border-b border-navy/30 pb-1 hover:border-navy">View all
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6" id="insightsGrid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative bg-navydeep text-white overflow-hidden">
+  <div class="aurora opacity-50"><span class="a1"></span><span class="a3"></span></div>
+  <div class="grain"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-20">
+      <!-- left: big type + info chips -->
+      <div class="lg:col-span-5 sr">
+        <span class="text-xs tracking-[0.25em] uppercase text-indigo-300 font-medium">Contact</span>
+        <h2 class="font-display font-bold text-5xl lg:text-7xl leading-[0.95] mt-6">
+          Let's<br>talk.
+        </h2>
+        <p class="text-white/60 text-lg font-light mt-8 max-w-sm leading-relaxed">Tell us about your matter — our team responds promptly to every enquiry.</p>
+
+        <div class="mt-12 space-y-3">
+          <a href="https://maps.google.com/?q=Kehkashan+Clifton+Karachi" target="_blank" class="group flex items-start gap-4 p-4 rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all">
+            <span class="mt-0.5 text-indigo-300"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 2a7 7 0 0 0-7 7c0 5 7 11 7 11s7-6 7-11a7 7 0 0 0-7-7z"/><circle cx="11" cy="9" r="2.5"/></svg></span>
+            <span><span class="block text-xs tracking-widest uppercase text-white/40">Address</span><span class="block mt-1">F-7/1, Block 8, Kehkashan Clifton, Karachi 75600, Pakistan.</span></span>
+          </a>
+          <a href="mailto:email@bharuchaco.com" class="group flex items-center gap-4 p-4 rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all">
+            <span class="text-indigo-300"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="16" height="12" rx="2"/><path d="M3 7l8 5 8-5"/></svg></span>
+            <span><span class="block text-xs tracking-widest uppercase text-white/40">Email</span><span class="block mt-1">email@bharuchaco.com</span></span>
+          </a>
+          <a href="tel:+922135379544" class="group flex items-center gap-4 p-4 rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all">
+            <span class="text-indigo-300"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 14l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 3 5a1 1 0 0 1 1-1z"/></svg></span>
+            <span><span class="block text-xs tracking-widest uppercase text-white/40">Phone</span><span class="block mt-1">+92 213 537 9544</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- right: floating-label form -->
+      <div class="lg:col-span-7 sr sr-d2 lg:pt-16">
+        <form id="contactForm" class="space-y-9">
+          <div class="grid sm:grid-cols-2 gap-x-10 gap-y-9">
+            <div class="ff"><input required type="text" id="f_name" placeholder=" "><label for="f_name">Your name</label></div>
+            <div class="ff"><input type="tel" id="f_phone" placeholder=" "><label for="f_phone">Phone</label></div>
+            <div class="ff"><input required type="email" id="f_email" placeholder=" "><label for="f_email">Email address</label></div>
+            <div class="ff"><input type="text" id="f_subj" placeholder=" "><label for="f_subj">Subject</label></div>
+          </div>
+          <div class="ff"><textarea id="f_msg" rows="3" placeholder=" "></textarea><label for="f_msg">Tell us about your matter</label></div>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-5 pt-2">
+            <button type="submit" class="magnetic group inline-flex items-center gap-3 pl-8 pr-3 py-3 rounded-full bg-white text-navy font-medium hover:bg-indigo2 hover:text-white transition-all">
+              Send message
+              <span class="w-9 h-9 rounded-full bg-navy text-white flex items-center justify-center group-hover:bg-white group-hover:text-navy transition-all">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h9M8 4l4 4-4 4"/></svg>
+              </span>
+            </button>
+            <span id="cfMsg" class="text-emerald-300 text-sm opacity-0 transition-opacity">Thanks — we'll be in touch shortly.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navydeep text-white/60">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
+    <img src="logo-white.png" alt="Bharucha & Co." class="h-7 w-auto">
+    <p class="text-sm">© 1948–2026 Bharucha &amp; Co. · Decades of legal excellence.</p>
+    <div class="flex gap-6 text-sm">
+      <a href="#firm" class="nav-link">The Firm</a>
+      <a href="#practice" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Practice areas
+const areas = [
+  {t:'Intellectual Property', d:'Patents, trademarks, designs, copyright, domain names, licensing.', img:'1505664194779-8beaceb93744'},
+  {t:'Corporate & Company Law', d:'Formation, governance, compliance and commercial advisory.', img:'1486406146926-c627a92ad1ab'},
+  {t:'Real Estate & Property', d:'Acquisitions, transfers, leasing and property disputes.', img:'1568605114967-8130f3a36994'},
+  {t:'Inheritance & Succession', d:'Estate planning, succession and family asset matters.', img:'1511895426328-dc8714191300'},
+  {t:'Franchising & Licensing', d:'Structuring, drafting and protecting franchise relationships.', img:'1441986300917-64674bd600d8'},
+  {t:'Litigation', d:'Dispute resolution and representation across forums.', img:'1589391886645-d51941baf7fb'},
+  {t:'Not-for-Profit Entities', d:'Advisory and compliance for charitable organisations.', img:'1559027615-cd4628902d4a'},
+  {t:'Contracts & Advisory', d:'Drafting, vetting and tailored civil-law consultancy.', img:'1521791055366-0d553872125f'},
+  {t:'Employment Law', d:'Workplace policy, contracts and employment disputes.', img:'1521791136064-7986c2920216'},
+];
+document.getElementById('paGrid').innerHTML = areas.map((a,i)=>`
+  <a href="#contact" class="pa-card sr ${i%3==1?'sr-d1':i%3==2?'sr-d2':''} group block bg-white border border-slate-200 rounded-2xl overflow-hidden h-full">
+    <div class="aspect-[16/9] overflow-hidden bg-navy relative">
+      <img src="https://images.unsplash.com/photo-${a.img}?w=700&q=80&auto=format&fit=crop" alt="${a.t}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      <span class="absolute top-3 left-3 font-display text-white/90 font-bold text-sm bg-navy/55 backdrop-blur-sm rounded-md px-2 py-0.5">${String(i+1).padStart(2,'0')}</span>
+    </div>
+    <div class="p-7">
+      <div class="flex items-start justify-between">
+        <h3 class="font-display font-semibold text-xl text-ink">${a.t}</h3>
+        <svg class="arrow text-navy shrink-0 mt-1 ml-2" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 15L15 5M7 5h8v8"/></svg>
+      </div>
+      <p class="text-slate2 mt-2 font-light leading-relaxed">${a.d}</p>
+    </div>
+  </a>`).join('');
+
+// Professionals
+const people = [
+  {name:'Mohammad Fazil Bharucha', role:'Partner', img:'Mohammad%20Fazil%20Bharucha.png'},
+  {name:'Abdul Aziz', role:'Partner', img:'Abdul%20Aziz.png'},
+  {name:'Tayseer Fazil Bharucha', role:'Partner', img:'Tayseer%20Fazil%20Bharucha.jpg'},
+];
+document.getElementById('peopleGrid').innerHTML = people.map((p,i)=>`
+  <div class="pa-card sr ${i==1?'sr-d1':i==2?'sr-d2':''} group bg-white border border-slate-200 rounded-2xl overflow-hidden">
+    <div class="aspect-square overflow-hidden bg-slate-100">
+      <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+    </div>
+    <div class="text-center px-6 py-7">
+      <h3 class="font-display font-semibold text-xl text-ink">${p.name}</h3>
+      <p class="mt-2 text-xs tracking-[0.2em] uppercase text-indigo2">${p.role}</p>
+    </div>
+  </div>`).join('');
+
+// Contact form
+const cform=document.getElementById('contactForm');
+if(cform)cform.addEventListener('submit',e=>{e.preventDefault();
+  const m=document.getElementById('cfMsg');m.style.opacity=1;cform.reset();
+  setTimeout(()=>m.style.opacity=0,5000);});
+
+// Memberships marquee
+const members=[
+  ['INTA','International Trademark Association'],
+  ['CITMA','Chartered Institute of Trade Mark Attorneys'],
+  ['AIPPI','International Association for the Protection of IP'],
+  ['APAA','Asian Patent Attorneys Association'],
+  ['CIPA','Chartered Institute of Patent Agents'],
+  ['AIPLA','American Intellectual Property Law Association'],
+  ['IBA','International Bar Association'],
+  ['IPBA','Inter-Pacific Bar Association'],
+  ['PTMG','Pharmaceutical Trade Marks Group'],
+  ['MARQUES','Association of European Trade Mark Owners'],
+  ['ECTA','European Communities Trade Mark Association'],
+  ['LES','Licensing Executives Society'],
+  ['FICPI','International Federation of IP Attorneys'],
+  ['GLIPA','Global Intellectual Property Alliance'],
+  ['AEA','Association of European Attorneys'],
+];
+const mcard=([ac,nm])=>`<div class="mcard"><span class="ac">${ac}</span><span class="nm">${nm}</span></div>`;
+const half=Math.ceil(members.length/2);
+const rowA=members.slice(0,half), rowB=members.slice(half);
+const mqA=document.getElementById('mqRowA'), mqB=document.getElementById('mqRowB');
+if(mqA)mqA.innerHTML=[...rowA,...rowA,...rowA].map(mcard).join('');
+if(mqB)mqB.innerHTML=[...rowB,...rowB,...rowB].map(mcard).join('');
+
+// Recognitions slider
+const recs = ['recog/x1.png','recog/x2.png','recog/x3.png','recog/x5.png','recog/x18.png','recog/x19.png','recog/x20.png','recog/x21.png','recog/x22.png','recog/IAM-PATENT-1000-Recommended-Firm-2026.png','recog/WTR-1000-Recommended-Firm-2026.png'];
+const recTrack=document.getElementById('recTrack');
+recTrack.innerHTML=recs.map(s=>`
+  <div class="rec-item shrink-0 px-4 lg:px-6 flex items-center justify-center">
+    <img src="${s}" alt="Recognition" class="max-h-24 lg:max-h-28 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+  </div>`).join('');
+(function(){
+  const items=[...recTrack.children];
+  let perView=4, idx=0, timer;
+  function calc(){perView=window.innerWidth<640?2:window.innerWidth<1024?3:4;
+    items.forEach(it=>it.style.width=(100/perView)+'%');
+    maxIdx=Math.max(0,items.length-perView); if(idx>maxIdx)idx=maxIdx; render();}
+  let maxIdx=0;
+  const dots=document.getElementById('recDots');
+  function render(){
+    recTrack.style.transform=`translateX(-${idx*(100/perView)}%)`;
+    dots.innerHTML=Array.from({length:maxIdx+1},(_,i)=>`<button data-i="${i}" class="w-2 h-2 rounded-full transition-all ${i===idx?'bg-navy w-5':'bg-slate-300'}"></button>`).join('');
+  }
+  function go(n){idx=(n<0)?maxIdx:(n>maxIdx)?0:n;render();}
+  document.getElementById('recPrev').onclick=()=>{go(idx-1);reset();};
+  document.getElementById('recNext').onclick=()=>{go(idx+1);reset();};
+  dots.onclick=e=>{const b=e.target.closest('button');if(b){go(+b.dataset.i);reset();}};
+  function auto(){timer=setInterval(()=>go(idx+1),3500);}
+  function reset(){clearInterval(timer);auto();}
+  window.addEventListener('resize',calc); calc(); auto();
+})();
+
+// Insights
+const posts = [
+  {tag:'Intellectual Property', t:'Protecting brands in a digital-first market', d:'How evolving trademark practice shapes brand strategy in Pakistan.', img:'https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&q=80&auto=format&fit=crop'},
+  {tag:'Corporate', t:'Governance essentials for growing companies', d:'Key compliance considerations for businesses scaling operations.', img:'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&auto=format&fit=crop'},
+  {tag:'Firm News', t:'Celebrating 75 years of legal excellence', d:'A milestone reflecting decades of trust and continuity.', img:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&auto=format&fit=crop'},
+];
+document.getElementById('insightsGrid').innerHTML = posts.map((p,i)=>`
+  <a href="#" class="sr ${i==1?'sr-d1':i==2?'sr-d2':''} group block rounded-2xl overflow-hidden border border-slate-200 hover:shadow-2xl hover:shadow-navy/10 transition-all duration-500">
+    <div class="aspect-[16/10] overflow-hidden bg-navy"><img src="${p.img}" alt="${p.t}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+    <div class="p-7">
+      <span class="text-xs tracking-widest uppercase text-indigo2 font-medium">${p.tag}</span>
+      <h3 class="font-display font-semibold text-xl mt-3 text-ink group-hover:text-navy transition-colors">${p.t}</h3>
+      <p class="text-slate2 mt-2 font-light">${p.d}</p>
+    </div>
+  </a>`).join('');
+
+// Hero reveal
+requestAnimationFrame(()=>document.getElementById('top').classList.add('hero-in'));
+
+// Scroll reveal
+const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.sr').forEach(el=>io.observe(el));
+
+// Counters
+const cio = new IntersectionObserver((es)=>es.forEach(e=>{
+  if(e.isIntersecting){const el=e.target,t=+el.dataset.target;let n=0;const step=Math.max(1,t/60);
+    const tick=()=>{n+=step;if(n>=t){el.textContent=t;}else{el.textContent=Math.floor(n);requestAnimationFrame(tick);}};tick();cio.unobserve(el);}
+}),{threshold:.6});
+document.querySelectorAll('.counter').forEach(el=>cio.observe(el));
+
+// Nav scroll state
+const nav=document.getElementById('nav'),navItems=document.getElementById('navItems'),navCta=document.getElementById('navCta'),logoWhite=document.getElementById('logoWhite'),logoNavy=document.getElementById('logoNavy');
+function navState(){
+  if(window.scrollY>40){
+    nav.classList.add('bg-white/90','backdrop-blur-md','shadow-sm');
+    logoWhite.classList.add('opacity-0');logoNavy.classList.remove('opacity-0');
+    navItems.querySelectorAll('a').forEach(a=>{a.classList.remove('text-white/90');a.classList.add('text-ink');});
+    navCta.classList.remove('border-white/30','text-white');navCta.classList.add('border-navy/30','text-navy','hover:bg-navy','hover:text-white');
+  }else{
+    nav.classList.remove('bg-white/90','backdrop-blur-md','shadow-sm');
+    logoWhite.classList.remove('opacity-0');logoNavy.classList.add('opacity-0');
+    navItems.querySelectorAll('a').forEach(a=>{a.classList.add('text-white/90');a.classList.remove('text-ink');});
+    navCta.classList.add('border-white/30','text-white');navCta.classList.remove('border-navy/30','text-navy','hover:bg-navy','hover:text-white');
+  }
+}
+navState();window.addEventListener('scroll',navState);
+
+// Mobile menu
+const burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>mm.classList.toggle('hidden'));
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.add('hidden')));
+
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ===== Per-letter headline ===== */
+document.querySelectorAll('.letters').forEach(el=>{
+  const txt=el.dataset.text;
+  el.innerHTML=[...txt].map(c=>c===' '?'<span class="ltr" style="width:.32em">&nbsp;</span>':`<span class="ltr">${c}</span>`).join('');
+});
+
+if(!reduce){
+  /* ===== Hero parallax + spotlight ===== */
+  const hero=document.getElementById('top'), parallax=[...document.querySelectorAll('.parallax')];
+  let tx=0,ty=0,cx=0,cy=0;
+  hero.addEventListener('mousemove',e=>{
+    const r=hero.getBoundingClientRect();
+    const px=(e.clientX-r.left)/r.width-0.5, py=(e.clientY-r.top)/r.height-0.5;
+    tx=px; ty=py;
+    hero.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    hero.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+  (function loop(){
+    cx+=(tx-cx)*.06; cy+=(ty-cy)*.06;
+    parallax.forEach(p=>{const d=+p.dataset.depth||10; p.style.transform=`translate(${cx*d}px,${cy*d}px)`;});
+    requestAnimationFrame(loop);
+  })();
+
+  /* ===== Particle field ===== */
+  const cv=document.getElementById('heroCanvas'), ctx=cv.getContext('2d');
+  let W,H,parts=[],mouse={x:-999,y:-999};
+  function size(){W=cv.width=hero.offsetWidth;H=cv.height=hero.offsetHeight;
+    const n=Math.min(70,Math.floor(W/22));parts=Array.from({length:n},()=>({
+      x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.6+.4}));}
+  size();window.addEventListener('resize',size);
+  hero.addEventListener('mousemove',e=>{const r=hero.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
+  hero.addEventListener('mouseleave',()=>{mouse.x=mouse.y=-999;});
+  (function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(const p of parts){
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1; if(p.y<0||p.y>H)p.vy*=-1;
+      const dx=p.x-mouse.x,dy=p.y-mouse.y,dist=Math.hypot(dx,dy);
+      if(dist<120){const f=(120-dist)/120;p.x+=dx/dist*f*1.2;p.y+=dy/dist*f*1.2;}
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,7);ctx.fillStyle='rgba(199,210,254,.55)';ctx.fill();
+    }
+    for(let i=0;i<parts.length;i++)for(let j=i+1;j<parts.length;j++){
+      const a=parts[i],b=parts[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+      if(d<110){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+        ctx.strokeStyle='rgba(165,180,252,'+(1-d/110)*.18+')';ctx.lineWidth=.6;ctx.stroke();}
+    }
+    requestAnimationFrame(draw);
+  })();
+
+  /* ===== Magnetic buttons ===== */
+  document.querySelectorAll('.magnetic').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();
+      btn.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.3}px,${(e.clientY-r.top-r.height/2)*.4}px)`;});
+    btn.addEventListener('mouseleave',()=>btn.style.transform='');
+  });
+
+  /* ===== Custom cursor ===== */
+  const cur=document.getElementById('cursor'),dot=document.getElementById('cursorDot');
+  let mx=0,my=0,dx2=0,dy2=0;
+  window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;
+    cur.style.opacity=1;dot.style.opacity=1;dot.style.left=mx+'px';dot.style.top=my+'px';});
+  (function cl(){dx2+=(mx-dx2)*.18;dy2+=(my-dy2)*.18;cur.style.left=dx2+'px';cur.style.top=dy2+'px';requestAnimationFrame(cl);})();
+  document.querySelectorAll('a,button,.pa-card,.ltr').forEach(el=>{
+    el.addEventListener('mouseenter',()=>cur.classList.add('big'));
+    el.addEventListener('mouseleave',()=>cur.classList.remove('big'));
+  });
+}
+</script>
+</body>
+</html>
