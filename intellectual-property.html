@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intellectual Property | Bharucha & Co.</title>
+<meta name="description" content="Bharucha & Co. — comprehensive intellectual property services in Pakistan: trade marks, patents, industrial designs, copyright and domain names.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="bharucha-config.js"></script>
+<link rel="stylesheet" href="bharucha.css">
+</head>
+<body>
+<div id="cursor"></div>
+
+<!-- NAV -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="index.html" class="relative flex items-center" aria-label="Bharucha & Co.">
+      <img id="logoWhite" src="logo-white.png" alt="Bharucha & Co." class="h-7 lg:h-8 w-auto transition-opacity duration-300">
+      <img id="logoNavy" src="logo-navy.png" alt="Bharucha & Co." class="h-7 lg:h-8 w-auto absolute left-0 top-0 opacity-0 transition-opacity duration-300">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9 text-sm font-medium" id="navItems">
+      <a href="index.html#firm" class="nav-link text-white/90">The Firm</a>
+      <a href="index.html#practice" class="nav-link text-white/90">Services</a>
+      <a href="index.html#people" class="nav-link text-white/90">Professionals</a>
+      <a href="index.html#insights" class="nav-link text-white/90">Insights</a>
+      <a href="index.html#contact" class="nav-link text-white/90">Contact</a>
+    </nav>
+    <a href="index.html#contact" id="navCta" class="hidden lg:inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full border border-white/30 text-white hover:bg-white hover:text-navy transition-all">Get in touch</a>
+    <button id="burger" class="lg:hidden text-white p-2" aria-label="Menu"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h18M4 13h18M4 18h18"/></svg></button>
+  </div>
+  <div id="mobileMenu" class="lg:hidden hidden bg-navydeep text-white px-6 pb-8 pt-2">
+    <a href="index.html#firm" class="block py-3 border-b border-white/10">The Firm</a>
+    <a href="index.html#practice" class="block py-3 border-b border-white/10">Services</a>
+    <a href="index.html#people" class="block py-3 border-b border-white/10">Professionals</a>
+    <a href="index.html#insights" class="block py-3 border-b border-white/10">Insights</a>
+    <a href="index.html#contact" class="block py-3 border-b border-white/10">Contact</a>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="relative bg-navydeep text-white overflow-hidden">
+  <div class="aurora"><span class="a1"></span><span class="a2"></span></div>
+  <div class="grain"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-36 pb-20 lg:pt-44 lg:pb-28">
+    <div class="flex items-center gap-2 text-sm text-white/50 mb-8">
+      <a href="index.html" class="hover:text-white transition-colors">Home</a>
+      <span>/</span><a href="index.html#practice" class="hover:text-white transition-colors">Services</a>
+      <span>/</span><span class="text-white/80">Intellectual Property</span>
+    </div>
+    <h1 class="font-display font-bold text-5xl lg:text-7xl leading-[0.95] max-w-4xl">Intellectual Property</h1>
+    <p class="mt-8 text-lg lg:text-xl text-white/70 font-light max-w-2xl leading-relaxed">A comprehensive range of IP services — patents, trade marks, designs, copyright, domain names, licensing, franchising and litigation. Ranked among the best intellectual property law firms in Pakistan.</p>
+  </div>
+</section>
+
+<!-- STICKY SECTION NAV -->
+<div class="sticky top-20 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <nav class="ipnav flex gap-2 sm:gap-6 overflow-x-auto py-4 text-sm font-medium text-slate2">
+      <a href="#trademarks" class="whitespace-nowrap border-b-2 border-transparent pb-1 hover:text-navy transition-colors">Trade Marks</a>
+      <a href="#patents" class="whitespace-nowrap border-b-2 border-transparent pb-1 hover:text-navy transition-colors">Patents</a>
+      <a href="#designs" class="whitespace-nowrap border-b-2 border-transparent pb-1 hover:text-navy transition-colors">Industrial Designs</a>
+      <a href="#copyright" class="whitespace-nowrap border-b-2 border-transparent pb-1 hover:text-navy transition-colors">Copyright</a>
+      <a href="#domains" class="whitespace-nowrap border-b-2 border-transparent pb-1 hover:text-navy transition-colors">Domain Names</a>
+    </nav>
+  </div>
+</div>
+
+<!-- TRADE MARKS -->
+<section id="trademarks" class="bg-white py-20 lg:py-28 scroll-mt-36">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <div class="sr flex items-center gap-5 mb-6">
+      <span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11V4h7l11 11-7 7L3 11z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl text-ink">Trade Marks</h2>
+    </div>
+    <p class="sr text-lg text-slate2 font-light leading-relaxed max-w-3xl">A trade mark is a word, phrase, symbol and/or design that identifies and distinguishes the source of the goods of one party from those of others. A service mark identifies and distinguishes the source of a service rather than goods.</p>
+    <div class="sr mt-8">
+      <p class="text-sm uppercase tracking-widest text-indigo2 font-medium mb-3">Governing legislation</p>
+      <div class="flex flex-wrap gap-3"><span class="badge">Trade Marks Ordinance 2001</span><span class="badge">Trade Marks Rules 2004</span></div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-7 mt-12">
+      <div class="ipcard p-8 sr">
+        <h3 class="font-display font-semibold text-xl text-ink mb-6">Procedure</h3>
+        <div class="space-y-6">
+          <div class="step"><span class="n">1</span><p class="text-slate2 leading-relaxed">The application is examined by the Registrar of Trade Marks, which usually takes around 12 months. If objections are raised, the applicant is notified to respond within 2 months.</p></div>
+          <div class="step"><span class="n">2</span><p class="text-slate2 leading-relaxed">Once the Registrar is satisfied with the written reply, the mark may be approved for advertisement. If not, the applicant is called for a hearing where further amendments may be required.</p></div>
+          <div class="step"><span class="n">3</span><p class="text-slate2 leading-relaxed">Once cleared of all objections, the mark is advertised in the Trade Marks Journal, inviting any third-party opposition to registration.</p></div>
+          <div class="step"><span class="n">4</span><p class="text-slate2 leading-relaxed">In the case of no opposition, the mark is then registered.</p></div>
+        </div>
+      </div>
+      <div class="ipcard p-8 sr sr-d1">
+        <h3 class="font-display font-semibold text-xl text-ink mb-6">Requirements</h3>
+        <ul class="space-y-3 text-slate2 leading-relaxed">
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Full name, nationality, trading style (if any) and full business address of the applicant.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>List of goods or services; separate applications for different classes.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Transliteration and translation of non-English words appearing in the mark.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>For a device/label mark, 15 prints of the mark.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>First date of use of the mark in Pakistan, if used.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Power of Attorney signed by the authorised signatory before a Notary Public.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>For priority, a "convention application" may be filed within six months; priority documents within three months of filing in Pakistan.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sr mt-10">
+      <h3 class="font-display font-semibold text-xl text-ink mb-5">Services we provide</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3" data-services="tm"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PATENTS -->
+<section id="patents" class="bg-offwhite py-20 lg:py-28 scroll-mt-36">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <div class="sr flex items-center gap-5 mb-6">
+      <span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18h6M10 21h4M12 2a6 6 0 0 0-3.5 10.9c.6.4 1 1 1 1.7V15h5v-.4c0-.7.4-1.3 1-1.7A6 6 0 0 0 12 2z"/></svg></span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl text-ink">Patents</h2>
+    </div>
+    <p class="sr text-lg text-slate2 font-light leading-relaxed max-w-3xl">A patent is a grant of exclusive rights for an invention — to make, use and sell it for a limited period of 20 years. Patents are granted for new, non-obvious product or process inventions with industrial application. Patentability criteria in Pakistan include novelty, inventive step and industrial applicability.</p>
+    <div class="sr mt-8">
+      <p class="text-sm uppercase tracking-widest text-indigo2 font-medium mb-3">Governing legislation</p>
+      <div class="flex flex-wrap gap-3"><span class="badge">Patents Ordinance 2000</span><span class="badge">Patents Rules 2003</span></div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-7 mt-12">
+      <div class="ipcard p-8 sr">
+        <h3 class="font-display font-semibold text-xl text-ink mb-6">Procedure</h3>
+        <div class="space-y-5">
+          <div class="step"><span class="n">1</span><p class="text-slate2 leading-relaxed">Receive request to file a patent.</p></div>
+          <div class="step"><span class="n">2</span><p class="text-slate2 leading-relaxed">Formalities with the client and the Patent Office.</p></div>
+          <div class="step"><span class="n">3</span><p class="text-slate2 leading-relaxed">Examination at the Patent Office (no fixed time).</p></div>
+          <div class="step"><span class="n">4</span><p class="text-slate2 leading-relaxed">Acceptance by the Controller of Patents.</p></div>
+          <div class="step"><span class="n">5</span><p class="text-slate2 leading-relaxed">Published in the IP Journal and/or website.</p></div>
+          <div class="step"><span class="n">6</span><p class="text-slate2 leading-relaxed">Sealed in the case of no opposition.</p></div>
+          <div class="step"><span class="n">7</span><p class="text-slate2 leading-relaxed">Renewals.</p></div>
+        </div>
+      </div>
+      <div class="ipcard p-8 sr sr-d1">
+        <h3 class="font-display font-semibold text-xl text-ink mb-6">Requirements</h3>
+        <ul class="space-y-3 text-slate2 leading-relaxed">
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Full name, nationality and complete business address of the applicant(s).</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Two copies of specification and claims in English (A-4 size).</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Two copies of drawing(s), if any, on A-4 sheets.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Application form signed by the applicant(s) and endorsed by the inventor(s) before two witnesses, or an assignment document.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Power of Authority signed by the applicant(s) and notarised.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>For priority, a certified copy of the basic specification filed within three months; priority claimable within 12 months of the first foreign application in WTO member countries.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sr mt-10">
+      <h3 class="font-display font-semibold text-xl text-ink mb-5">Types of patent application</h3>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="ipcard p-6"><h4 class="font-display font-semibold text-ink mb-2">Ordinary Application</h4><p class="text-slate2 text-sm leading-relaxed">Created once all criteria to file are met. The official date is the date it is filed at the Patent Office.</p></div>
+        <div class="ipcard p-6"><h4 class="font-display font-semibold text-ink mb-2">Patent of Addition</h4><p class="text-slate2 text-sm leading-relaxed">For improvements or modifications of an invention already applied for or granted.</p></div>
+        <div class="ipcard p-6"><h4 class="font-display font-semibold text-ink mb-2">Convention Application</h4><p class="text-slate2 text-sm leading-relaxed">A priority application dated as of the corresponding application first made in a WTO member country.</p></div>
+      </div>
+    </div>
+    <div class="sr mt-10">
+      <h3 class="font-display font-semibold text-xl text-ink mb-5">Services we provide</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3" data-services="pt"></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIAL DESIGNS -->
+<section id="designs" class="bg-white py-20 lg:py-28 scroll-mt-36">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <div class="sr flex items-center gap-5 mb-6">
+      <span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl text-ink">Industrial Designs</h2>
+    </div>
+    <p class="sr text-lg text-slate2 font-light leading-relaxed max-w-3xl">An industrial design is the ornamental or aesthetic aspect of an article. It may consist of three-dimensional features, such as the shape or surface of an article, or two-dimensional features, such as patterns, lines or colour.</p>
+    <div class="sr mt-8">
+      <p class="text-sm uppercase tracking-widest text-indigo2 font-medium mb-3">Governing legislation</p>
+      <div class="flex flex-wrap gap-3"><span class="badge">Registered Designs Ordinance 2000</span><span class="badge">Registered Designs Rules 2023</span></div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-7 mt-12">
+      <div class="ipcard p-8 sr">
+        <h3 class="font-display font-semibold text-xl text-ink mb-6">Procedure</h3>
+        <div class="space-y-5">
+          <div class="step"><span class="n">1</span><p class="text-slate2 leading-relaxed">Filing of the design application at the IP office.</p></div>
+          <div class="step"><span class="n">2</span><p class="text-slate2 leading-relaxed">Examination of the application.</p></div>
+          <div class="step"><span class="n">3</span><p class="text-slate2 leading-relaxed">If all terms are satisfied by the Registrar, it is registered.</p></div>
+          <div class="step"><span class="n">4</span><p class="text-slate2 leading-relaxed">Issuance of a Registration Certificate, valid for 10 years.</p></div>
+        </div>
+      </div>
+      <div class="ipcard p-8 sr sr-d1">
+        <h3 class="font-display font-semibold text-xl text-ink mb-6">Requirements</h3>
+        <ul class="space-y-3 text-slate2 leading-relaxed">
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Full name, nationality and complete business address of the applicant.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Representations of the design (line drawings / photographs).</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Power of Authority signed by the authorised signatory before a Notary Public.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>For priority, certified documents at filing or within three months (with late fee); priority claimable within six months of the first foreign application in WTO member countries.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sr mt-10">
+      <h3 class="font-display font-semibold text-xl text-ink mb-5">Services we provide</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3" data-services="ds"></div>
+    </div>
+  </div>
+</section>
+
+<!-- COPYRIGHT -->
+<section id="copyright" class="bg-offwhite py-20 lg:py-28 scroll-mt-36">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <div class="sr flex items-center gap-5 mb-6">
+      <span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a3.5 3.5 0 1 0 0 5"/></svg></span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl text-ink">Copyright</h2>
+    </div>
+    <p class="sr text-lg text-slate2 font-light leading-relaxed max-w-3xl">Copyright is a legal instrument that gives the creator of a work of art, literature or a work that conveys information or ideas the right to control how the work is used — advancing the progress of knowledge by giving authors an economic incentive to create.</p>
+    <div class="sr mt-8">
+      <p class="text-sm uppercase tracking-widest text-indigo2 font-medium mb-3">Governing legislation</p>
+      <div class="flex flex-wrap gap-3"><span class="badge">Copyright Ordinance 1962</span><span class="badge">Copyright Rules 1967</span></div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-7 mt-12">
+      <div class="ipcard p-8 sr">
+        <h3 class="font-display font-semibold text-xl text-ink mb-6">Procedure</h3>
+        <div class="space-y-5">
+          <div class="step"><span class="n">1</span><p class="text-slate2 leading-relaxed">Filing the copyright application.</p></div>
+          <div class="step"><span class="n">2</span><p class="text-slate2 leading-relaxed">Publication in a leading newspaper within 1 month of filing.</p></div>
+          <div class="step"><span class="n">3</span><p class="text-slate2 leading-relaxed">Scrutiny or opposition (if any) regarding the application.</p></div>
+          <div class="step"><span class="n">4</span><p class="text-slate2 leading-relaxed">If opposed, the application status is changed to "pending".</p></div>
+          <div class="step"><span class="n">5</span><p class="text-slate2 leading-relaxed">Registration in the case of no opposition.</p></div>
+        </div>
+      </div>
+      <div class="ipcard p-8 sr sr-d1">
+        <h3 class="font-display font-semibold text-xl text-ink mb-6">Requirements</h3>
+        <ul class="space-y-3 text-slate2 leading-relaxed">
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Full name, nationality and full business address of the applicant.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Power of Attorney.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Name, business and residential address of the author of the work.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>The year of creation of the work.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Year from which the work was published/used (in Pakistan and worldwide).</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>Affidavit from the author if the applicant is not the author and the work has been assigned.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>For a logo/artwork, copies on card with author name, applicant name and year of creation (4 sets).</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sr mt-10">
+      <h3 class="font-display font-semibold text-xl text-ink mb-5">Services we provide</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3" data-services="cp"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAIN NAMES -->
+<section id="domains" class="bg-white py-20 lg:py-28 scroll-mt-36">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10">
+    <div class="sr flex items-center gap-5 mb-6">
+      <span class="ico"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 6 3.5 9S14.5 18.5 12 21c-2.5-2.5-3.5-6-3.5-9S9.5 5.5 12 3z"/></svg></span>
+      <h2 class="font-display font-bold text-3xl lg:text-4xl text-ink">Domain Names</h2>
+    </div>
+    <p class="sr text-lg text-slate2 font-light leading-relaxed max-w-3xl">A domain name is a mark which is a user-friendly substitute for an Internet address. The provisions of the Trade Marks Ordinance 2001 apply to domain names, subject to the provisions of the Third Schedule.</p>
+    <div class="grid lg:grid-cols-2 gap-7 mt-12">
+      <div class="ipcard p-8 sr">
+        <h3 class="font-display font-semibold text-xl text-ink mb-4">Requirements for registration</h3>
+        <p class="text-slate2 leading-relaxed">A domain name used as a source identifier may be registered as a trade mark in respect of relevant goods or services. The applicant must show that they offer goods or services via the internet using the domain name, with a specimen demonstrating use of the domain name as a source identifier.</p>
+        <p class="text-slate2 leading-relaxed mt-4 text-sm"><span class="font-medium text-ink">Note:</span> Use of a domain name as a mere directional reference — similar to a telephone number or business address — is not taken as use as a source identifier.</p>
+      </div>
+      <div class="ipcard p-8 sr sr-d1">
+        <h3 class="font-display font-semibold text-xl text-ink mb-4">Key provisions</h3>
+        <ul class="space-y-3 text-slate2 leading-relaxed">
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>A domain name may indicate the geographical origin of goods or services.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>It must not be misleading as to its character or significance; the Registrar may require an indication that it is a domain name.</li>
+          <li class="flex gap-3"><span class="text-indigo2 mt-1">▪</span>The provisions for acceptance, opposition and registration of trade marks also apply to domain names.</li>
+        </ul>
+        <div class="mt-6 flex items-center gap-3 bg-indigo-50 rounded-xl px-5 py-4">
+          <span class="text-navy"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="8"/><path d="M11 6v5l3 2"/></svg></span>
+          <p class="text-sm text-ink"><span class="font-medium">Term:</span> registered for 5 years from the date of registration and renewable for further like terms, as long as the domain name is in actual use on the internet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="relative bg-navy text-white overflow-hidden">
+  <div class="aurora opacity-40"><span class="a2"></span></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28 flex flex-col lg:flex-row lg:items-center justify-between gap-8 sr">
+    <div>
+      <h2 class="font-display font-bold text-4xl lg:text-5xl leading-tight">Protect what you've built.</h2>
+      <p class="text-white/70 font-light mt-4 max-w-xl text-lg">Speak with our intellectual property team about safeguarding your brands, inventions and creative work.</p>
+    </div>
+    <a href="index.html#contact" class="magnetic inline-flex items-center gap-3 pl-8 pr-3 py-3 rounded-full bg-white text-navy font-medium hover:bg-indigo2 hover:text-white transition-all whitespace-nowrap group">
+      Get in touch
+      <span class="w-9 h-9 rounded-full bg-navy text-white flex items-center justify-center group-hover:bg-white group-hover:text-navy transition-all"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h9M8 4l4 4-4 4"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navydeep text-white/60">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
+    <img src="logo-white.png" alt="Bharucha & Co." class="h-7 w-auto">
+    <p class="text-sm">© 1948–2026 Bharucha &amp; Co. · Decades of legal excellence.</p>
+    <div class="flex gap-6 text-sm">
+      <a href="index.html#firm" class="nav-link">The Firm</a>
+      <a href="index.html#practice" class="nav-link">Services</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Services lists
+const services={
+  tm:['Trade Mark Searches','Application Filings','Legal Actions','Hearings','Oppositions','Acceptance & Registration','Renewals','Post Registration','Appeal in Superior Courts','Trade Mark Journal Watch Services'],
+  pt:['Patent Searches','Application Filing','Legal Actions','Hearings','Acceptance & Sealing','Filing Oppositions','Annuities','Post Grant Matters','Appeal in Superior Courts','Patent Validity Check'],
+  ds:['Design Searches','Filing New Applications','Design Registrations','Legal Actions','Annuities'],
+  cp:['New Filings','Official Actions','Acceptance & Registration'],
+};
+const chk='<svg width="18" height="18" fill="none" stroke="#4F46E5" stroke-width="2" class="shrink-0"><path d="M3 9l4 4 8-9"/></svg>';
+document.querySelectorAll('[data-services]').forEach(el=>{
+  el.innerHTML=services[el.dataset.services].map(s=>`<div class="schip">${chk}<span>${s}</span></div>`).join('');
+});
+
+// Section nav active state
+const ipLinks=[...document.querySelectorAll('.ipnav a')];
+const ipSecs=ipLinks.map(a=>document.querySelector(a.getAttribute('href')));
+window.addEventListener('scroll',()=>{
+  let cur=ipSecs.findIndex(s=>s.getBoundingClientRect().top>180);
+  cur=cur===-1?ipSecs.length-1:Math.max(0,cur-1);
+  ipLinks.forEach((a,i)=>a.classList.toggle('active',i===cur));
+});
+</script>
+<script src="bharucha.js"></script>
+</body>
+</html>
